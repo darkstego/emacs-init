@@ -1,0 +1,8 @@
+* My Emacs Init File
+This is my user init file to use under Wakib.
+
+To install just use the following:
+
+#+BEGIN_SRC bash
+git clone https://github.com/darkstego/wakib.d.git ~/.emacs.d && git clone https://github.com/darkstego/emacs-init.git ~/.emacs.d/user
+#+END_SRC
