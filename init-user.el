@@ -4,7 +4,15 @@
 (electric-pair-mode 1)
 
 ;; Auto-save org-mode buffers
-(add-hook 'auto-save-hook 'org-save-all-org-buffers)
+(add-hook 'auto-save-hook 'save-my-org-buffers)
+(defun save-my-org-buffers()
+  (interactive)
+  (save-some-buffers t (lambda ()
+			 (and buffer-file-name
+			      (eq major-mode 'org-mode)
+			      (string= (expand-file-name "./")
+				  (expand-file-name "~/Dropbox/org/"))))))
+
 
 (use-package visual-fill-column
   :config
