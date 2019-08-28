@@ -10,5 +10,6 @@
   :config
   (add-hook 'visual-line-mode-hook #'visual-fill-column-mode))
 
+(setq org-agenda-files (list "~/Dropbox/org/todo.org"))
 
 (provide 'init-user)
