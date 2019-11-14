@@ -20,4 +20,8 @@
 
 (setq org-agenda-files (list "~/Dropbox/org/todo.org"))
 
+(use-package keychain-environment
+  :config
+  (keychain-refresh-environment))
+
 (provide 'init-user)
