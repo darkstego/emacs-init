@@ -31,4 +31,8 @@
       'company
     '(add-to-list 'company-backends 'company-omnisharp)))
 
+;; Mouse wheel tilt left/right
+(setq mouse-wheel-tilt-scroll t)
+(setq mouse-wheel-flip-direction t)
+
 (provide 'init-user)
