@@ -24,4 +24,11 @@
   :config
   (keychain-refresh-environment))
 
+(use-package omnisharp
+  :config
+  (add-hook 'csharp-mode-hook 'omnisharp-mode)
+  (eval-after-load
+      'company
+    '(add-to-list 'company-backends 'company-omnisharp)))
+
 (provide 'init-user)
