@@ -54,6 +54,21 @@
 ;;(use-package dap-mode)
 ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
 
-(use-package vterm)
+(use-package vterm
+  :config
+  (define-key vterm-mode-map [remap previous-line] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap next-line] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap left-char] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap right-char] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap backward-word] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap forward-word] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap move-beginning-of-line] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap move-end-of-line] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap backward-kill-word] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap kill-word] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap delete-backward-char] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap delete-char] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap wakib-backward-kill-line] 'vterm--self-insert)
+  (define-key vterm-mode-map [remap kill-line] 'vterm--self-insert))
 
 (provide 'init-user)
