@@ -71,4 +71,7 @@
   (define-key vterm-mode-map [remap wakib-backward-kill-line] 'vterm--self-insert)
   (define-key vterm-mode-map [remap kill-line] 'vterm--self-insert))
 
+(use-package smart-tabs-mode
+  )
+
 (provide 'init-user)
