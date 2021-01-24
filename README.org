@@ -4,5 +4,5 @@ This is my user init file to use under Wakib.
 To install just use the following:
 
 #+BEGIN_SRC bash
-git clone git@github.com:darkstego/wakib.d.git ~/.emacs.d && git clone git@github.com:darkstego/emacs-init.git ~/.emacs.d/user
+git clone git@github.com:darkstego/wakib.d.git ~/.config/emacs && git clone git@github.com:darkstego/emacs-init.git ~/.config/emacs/user
 #+END_SRC
