@@ -83,12 +83,13 @@
 
 
 (use-package smart-tabs-mode
-  :quelpa (smart-tabs-mode
+  :quelpa ((smart-tabs-mode
            :fetcher github
            :repo "darkstego/smarttabs")
+	   :upgrade t)
   :config
   (smart-tabs-insinuate 'c 'c++ 'java 'javascript 'cperl 'python
-                       'ruby 'nxml 'crystal))
+			'ruby 'nxml 'crystal))
 
 
 (provide 'init-user)
