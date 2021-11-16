@@ -3,6 +3,9 @@
 ;; Automatically create closing parenthesis/quote
 (electric-pair-mode 1)
 
+;; Enable my preferred tab width
+(setq-default tab-width 3)
+
 ;; Auto-save org-mode buffers
 (add-hook 'auto-save-hook 'save-my-org-buffers)
 (defun save-my-org-buffers()
@@ -13,6 +16,8 @@
 			      (string= (expand-file-name "./")
 				  (expand-file-name "~/Dropbox/org/"))))))
 
+;; Use wakib-back-to-indentation-or-beginning
+(define-key wakib-keys-overriding-map (kbd "M-U") 'wakib-back-to-indentation-or-beginning)
 
 (use-package visual-fill-column
   :config
@@ -71,7 +76,19 @@
   (define-key vterm-mode-map [remap wakib-backward-kill-line] 'vterm--self-insert)
   (define-key vterm-mode-map [remap kill-line] 'vterm--self-insert))
 
+;;; Install quelpa itself:
+(use-package quelpa-use-package
+  :init (setq quelpa-update-melpa-p nil)
+  :config (quelpa-use-package-activate-advice))
+
+
 (use-package smart-tabs-mode
-  )
+  :quelpa (smart-tabs-mode
+           :fetcher github
+           :repo "darkstego/smarttabs")
+  :config
+  (smart-tabs-insinuate 'c 'c++ 'java 'javascript 'cperl 'python
+                       'ruby 'nxml 'crystal))
+
 
 (provide 'init-user)
