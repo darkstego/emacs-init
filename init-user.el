@@ -91,5 +91,11 @@
   (smart-tabs-insinuate 'c 'c++ 'java 'javascript 'cperl 'python
 			'ruby 'nxml 'crystal))
 
+(use-package editorconfig
+  :diminish editorconfig-mode
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 
 (provide 'init-user)
