@@ -97,5 +97,9 @@
   :config
   (editorconfig-mode 1))
 
+(use-package gdscript-mode
+  :mode "\\.gd\\'")
+
+
 
 (provide 'init-user)
